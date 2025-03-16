@@ -13,6 +13,6 @@ urlpatterns = [
     path('login/', login, name='login'),
     path('profile/', profile_view, name='profile'),
     #path('login/', LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout', logout, name='logout'),
+    path('logout/', logout, name='logout'),
     #path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
 ]

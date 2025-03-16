@@ -46,10 +46,42 @@
         .list-item:last-child {
             border-bottom: none; /* Remove border from last item */
         }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b2dfdb;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'profile' %}">User Profile</a></li>
+                <li><a href="{% url 'record_symptoms' %}">Record Symptoms</a></li>
+                <li><a href="{% url 'doctor_observations' 0 %}">Doctor Observations</a></li>
+                <li><a href="{% url 'lab_results' 0 %}">Lab Results</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+        </nav>
         <h1>Diagnosis Summary</h1>
     </header>
 
