@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Lab Results{% endblock %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'css/styles.css' %}"> {% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="result">Lab Results:</label>
+        <textarea id="result" name="result" required></textarea>
+        <button type="submit">Submit Lab Result</button>
+    </form>
+{% endblock %}

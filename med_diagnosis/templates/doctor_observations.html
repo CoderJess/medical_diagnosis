@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<title>{% block title %}Doctor's Observations{% endblock %}</title>
+
+{% block styles %} <link rel="stylesheet" href="{% static 'css/styles.css' %}"> {% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="observation">Doctor's Observation:</label>
+        <textarea id="observation" name="observation" required></textarea>
+        <button type="submit">Submit Observation</button>
+    </form>
+{% endblock %}

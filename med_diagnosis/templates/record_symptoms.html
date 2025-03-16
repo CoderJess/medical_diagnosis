@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Symptoms{% endblock %}
+
+{% block styles %} <link rel="stylesheet" href="{% static 'css/styles.css' %}"> {% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="symptoms">Enter Symptoms:</label>
+        <textarea id="symptoms" name="symptoms" required></textarea>
+        <button type="submit">Submit Symptoms</button>
+    </form>
+{% endblock %}
+        
